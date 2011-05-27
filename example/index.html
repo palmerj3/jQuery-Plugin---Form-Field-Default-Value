@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>jQuery Form Default Values Plugin</title>
+	<script type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../lib/jquery.form-defaults.js"></script>
+	
+	<script type="text/javascript">
+	<!--
+		jQuery(document).ready(function() {
+			//Uncomment to allow submission of default values
+			//jQuery.fn.DefaultValue.settings.clear_defaults_on_submit=false;
+			
+			//Use label property for default value
+			$("#fname").DefaultValue();
+			
+			//Set default values explicitly
+			$("#lname").DefaultValue("Enter your last name..");
+			$("#desc").DefaultValue("Describe yourself...");
+		});
+	-->
+	</script>
+</head>
+<body>
+	<fieldset>
+		<legend>Example Form</legend>
+		<form action="process.php" method="post">
+			<label for="fname">First Name: </label>
+			<input type="text" size="30" name="fname" id="fname" value="" label="First Name" /><br />
+			
+			<label for="fname">Last Name: </label>
+			<input type="text" size="30" name="lname" id="lname" /><br />
+			
+			<label for="desc">Description:</label><br />
+			<textarea id="desc" name="desc"></textarea><br />
+			
+			<input type="submit" value="Submit" />
+		</form>
+	</fieldset>
+</body>
+</html>
